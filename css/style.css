@@ -1,0 +1,276 @@
+/* Reset & Base Styles */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a192f;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a192f;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #00bcd4;
+  }
+  
+  nav .myport a {
+    text-decoration: none;
+    color: #00bcd4;
+    outline: none;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Sections */
+  section {
+    padding: 4rem 2rem;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  #hero {
+    margin: 25px 25px;
+    background-color: #112240;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  #profile-pic{
+    border-radius: 10px;
+    border-color:#0a192f;
+    border-style: solid;
+    border-width: 10px;
+    height: 300px;
+    width: 300px;
+  }
+  #profile{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #intro{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width:700px;
+  justify-content: center;
+  padding-right: 100px;
+  margin-bottom: 100px;
+  }
+  
+  .project {
+    margin-top: 2rem;
+    background-color: #112240;
+    padding: 1.5rem;
+    border-left: 5px solid #00bcd4;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background: #0a192f;
+    border-top: 1px solid #00bcd4;
+    margin-top: 2rem;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  
+    #hero {
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+  
+    #profile {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  
+    #profile-pic {
+      width: 80%;
+      height: auto;
+      max-width: 300px;
+    }
+  
+    #intro {
+      width: 100%;
+      margin: 0;
+      padding: 0 1rem;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav {
+      padding: 1rem;
+    }
+  
+    #profile-pic {
+      width: 100%;
+      max-width: 250px;
+    }
+  
+    section {
+      padding: 2rem 1rem;
+    }
+  }
+
+  #aboutme{
+    margin-bottom: 20px;
+  }
+
+  #viewcv{
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #00bcd4;
+    outline: none;
+  }
+  #viewcv a{
+    text-decoration: none;
+    color: #00bcd4;
+    outline: none;
+  }
+
+  #resume{
+    height: 1000px;
+  }
+
+  #backbutton{
+    position: fixed;
+    top: 100px;
+    right: 110px;
+    width: 300px;
+    text-align: center;
+  }
+
+  #backbutton a{
+    display: block;
+    margin-bottom: 100px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #00bcd4;
+    outline: none;
+    font-size: 35px;
+  }
+
+  #backbutton a:hover{
+    color: aliceblue;
+  }
+
+  .content{
+    display: flex;
+  }
+  .project .description{
+    width: 700px;
+    margin-right: 50px;
+    text-align: justify;
+  }
+
+  .projimg{
+    margin-top: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  .dropdown > div {
+    background-color: #00bcd4;
+    color: #0a192f;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown > div:hover {
+    background-color: #00acc1; /* Slightly darker on hover */
+  }
+
+  .dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #0a192f;
+    border: 1px solid #00bcd4;
+    border-radius: 4px;
+    width: max-content;
+    box-shadow: 0 2px 8px rgba(0, 188, 212, 0.2);
+    z-index: 1000;
+  }
+
+  .dropdown ul li {
+    padding: 10px 20px;
+    white-space: nowrap;
+    color: white;
+    transition: background-color 0.2s;
+  }
+
+  .dropdown ul li:hover {
+    background-color: #00bcd4;
+    color: #0a192f;
+  }
+
+  .dropdown:hover ul {
+    display: block;
+  }
+
+  #contacts{
+    color: #00bcd4;
+  }
